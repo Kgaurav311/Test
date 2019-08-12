@@ -2,4 +2,4 @@
 
 phpinfo(); 
 
-echo 'This is Auto Commit Test'
+echo 'This is Auto Commit Test' ; exit;
