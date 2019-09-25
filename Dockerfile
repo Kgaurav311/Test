@@ -9,9 +9,9 @@ RUN yum-config-manager --enable remi-php56
 RUN yum -y update
 RUN yum -y install php-cli
 # Expose apache.
+CMD ["-D", "FOREGROUND"]
+ENTRYPOINT ["/usr/sbin/httpd"]
 EXPOSE 80
-#EXPOSE 8080
-#EXPOSE 443
-EXPOSE 3306
+EXPOSE 443
 
 COPY ./index.php  /var/www/html/
